@@ -1,0 +1,6 @@
+package com.asroo.read_provider
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}

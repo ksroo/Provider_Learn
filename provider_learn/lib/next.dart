@@ -12,9 +12,23 @@ class Second extends StatelessWidget {
         }),
       ),
       body: Center(
-        child: Consumer<MyCounter>(builder: (context, mycounter, child) {
-          return Text("${mycounter.counter}");
-        }),
+        child: Column(
+          children: [
+            Consumer<MyCounter>(builder: (context, mycounter, child) {
+              return Text("${mycounter.counter}");
+            }),
+            Consumer<MyCounter>(builder: (context, mycounter, child) {
+              return RaisedButton(
+                child: Text("Inc"),
+                onPressed: (){
+                  mycounter.inc();
+                },
+              );
+            }),
+
+          ],
+
+        ),
       ),
     );
   }
