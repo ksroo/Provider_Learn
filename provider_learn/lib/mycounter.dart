@@ -7,8 +7,5 @@ class MyCounter extends ChangeNotifier {
     counter++;
     notifyListeners();
   }
-  bbc(){
-    counter--;
-    notifyListeners();
-  }
+
 }
